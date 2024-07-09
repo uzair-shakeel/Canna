@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { IoCaretDown } from "react-icons/io5";
+import Delivery from "./Delivery";
 
 const Products = () => {
   const [open, setOpen] = useState(false);
@@ -115,7 +116,9 @@ const Products = () => {
         </div>
       </div>
 
-      <div className="py-24 px-[5%]">
+      <Delivery />
+
+      <div className="pb-24 px-[5%]">
         <h3 className="font-bold text-3xl pb-8 text-center ">New Arrivals</h3>
         <div className="grid grid-cols-4 gap-4 ">
           <div className="relative group overflow-hidden">

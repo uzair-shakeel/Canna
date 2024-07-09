@@ -7,7 +7,7 @@
 
 .carousel-content {
   display: inline-block;
-  animation: scroll 50s linear infinite;
+  animation: scroll 150s linear infinite;
 }
 
 @keyframes scroll {
