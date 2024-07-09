@@ -2,10 +2,10 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="bg-blue-100  px-[2%]">
-      <div className="flex gap-24 py-14">
-        <div className="w-[40%] flex gap-8 flex-col items-center">
-          <div className="h-40 w-40 rounded-2xl shadow-lg overflow-hidden">
+    <div className="bg-blue-100 px-[15%] lg:px-[2%]">
+      <div className="flex flex-col lg:flex-row gap-24 py-14">
+        <div className="lg:w-[40%] flex gap-8 flex-col items-center">
+          <div className="h-24 w-24 lg:h-40 lg:w-40 rounded-2xl shadow-lg overflow-hidden">
             <img src="/logo.webp" className="h-full w-full object-cover" />
           </div>
           <p className=" font-light text-justify text-sm ">
@@ -19,7 +19,7 @@ const Footer = () => {
             treat, cure or prevent any disease.
           </p>
         </div>
-        <div className="w-[60%]   grid grid-cols-3 gap-4">
+        <div className="lg:w-[60%]  grid grid-cols-3 gap-4">
           <ul className="space-y-3">
             <li className="font-bold  underline-offset-4">Shop Now</li>
             <li className="cursor-pointer hover:text-blue-800 duration-150">

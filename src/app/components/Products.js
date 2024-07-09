@@ -56,14 +56,14 @@ const Products = () => {
 
   return (
     <div>
-      <h2 className="font-bold text-3xl py-8 text-center ">
+      <h2 className="font-bold text-xl md:text-3xl py-8  text-center ">
         Featured Collection
       </h2>
-      <div className="flex gap-9 justify-center">
+      <div className="flex gap-9 justify-center px-[5%] md:px-0">
         {["All Collections", "Theme Boxes", "Made By CannaMiami"].map((tab) => (
           <button
             key={tab}
-            className={`border-b pb-3 ${
+            className={`border-b pb-3 text-sm md:text-md ${
               selectedTab === tab
                 ? "border-black font-semibold"
                 : "border-transparent"
@@ -75,19 +75,19 @@ const Products = () => {
         ))}
       </div>
       <h4
-        className="pl-[5%] py-3 flex gap-3 items-center cursor-pointer"
+        className="pl-[5%] py-3 flex gap-3 items-center cursor-pointer text-sm md:text-md"
         onClick={() => setOpen(!open)}
       >
         Shop By Menu <IoCaretDown className="mt-0" size={18} />
       </h4>
       <div className={`flex px-[5%]`}>
         <div
-          className={`w-[25%] ${
+          className={`w-[33%] md:w-[25%] ${
             open === true ? "flex" : "hidden"
           }  flex-col  uppercase`}
         >
           <div className="text-start">
-            <ul className="py-4 space-y-2 font-extralight ">
+            <ul className="py-4 space-y-2 text-[12px] md:text-md font-extralight ">
               {menuItems.map((item) => (
                 <li
                   key={item}
@@ -105,7 +105,9 @@ const Products = () => {
 
         <div
           className={`grid  gap-4 ${
-            open === true ? "w-[75%] grid-cols-3" : "w-full grid-cols-4"
+            open === true
+              ? "w-[66%] md:w-[75%] grid-cols-2 md:grid-cols-3"
+              : "w-full grid-cols-3 md:grid-cols-4"
           } `}
         >
           {tabData[selectedTab].map((src, index) => (
@@ -120,7 +122,7 @@ const Products = () => {
 
       <div className="pb-24 px-[5%]">
         <h3 className="font-bold text-3xl pb-8 text-center ">New Arrivals</h3>
-        <div className="grid grid-cols-4 gap-4 ">
+        <div className="grid grid-cols-3 md:grid-cols-4 gap-4 ">
           <div className="relative group overflow-hidden">
             <img
               src="/new/Image1.webp"
@@ -277,7 +279,7 @@ const Products = () => {
 
       <div className="pb-24 px-[5%]">
         <h3 className="font-bold text-3xl pb-8 text-center ">Back In Stock</h3>
-        <div className="grid grid-cols-4 gap-4 ">
+        <div className="grid grid-cols-3 md:grid-cols-4 gap-4 ">
           <div className="relative group overflow-hidden">
             <img
               src="/new/Image2.webp"
@@ -434,7 +436,7 @@ const Products = () => {
 
       <div className="pb-24 px-[5%]">
         <h3 className="font-bold text-3xl pb-8 text-center ">Popular Items</h3>
-        <div className="grid grid-cols-4 gap-4 ">
+        <div className="grid grid-cols-3 md:grid-cols-4 gap-4 ">
           <div className="relative group overflow-hidden">
             <img src="/new/Image3.jpg" className="h-full w-full object-cover" />
             <div className="absolute inset-0 bottom-[-500px] group-hover:bottom-0 duration-300">
