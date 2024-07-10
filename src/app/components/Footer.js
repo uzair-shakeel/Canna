@@ -19,8 +19,8 @@ const Footer = () => {
             treat, cure or prevent any disease.
           </p>
         </div>
-        <div className="lg:w-[60%]  grid grid-cols-3 gap-4">
-          <ul className="space-y-3">
+        <div className="lg:w-[60%]  grid grid-cols-2 md:grid-cols-3 gap-4">
+          <ul className="hidden md:block space-y-3">
             <li className="font-bold  underline-offset-4">Shop Now</li>
             <li className="cursor-pointer hover:text-blue-800 duration-150">
               Subsciption
