@@ -26,6 +26,18 @@ const Navbar = () => {
           <FaUserAlt className="h-6 w-6 md:h-8 md:w-8" />
         </div>
       </div>
+      <div className="bg-black px-[5%] pb-5 flex justify-between md:hidden">
+        <div className="px-4  flex items-center justify-between w-full py-2 text-black rounded-md bg-white">
+          <input
+            placeholder="Search a Product... "
+            type="text"
+            className="outline-none ml-2"
+          />
+          <button>
+            <CiSearch className="font-bold cursor-pointer h-7 w-7" />
+          </button>
+        </div>
+      </div>
     </div>
   );
 };
