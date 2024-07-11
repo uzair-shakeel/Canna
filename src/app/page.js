@@ -21,7 +21,7 @@ export default function Home() {
         <FaPhone size={25} className="text-blue-100" />
       </a>
 
-      <div className="fixed w-full bottom-0  py-3 bg-black/10 backdrop-blur-lg border-black  flex justify-evenly md:hidden">
+      <div className="fixed w-full bottom-0  py-3 bg-blue-100  flex justify-evenly md:hidden">
         <img src="/new/CBD.png" className="h-8 w-8" />
         <img src="/new/THCA.png" className="h-8 w-8" />
         <img src="/new/delta8.png" className="h-8 w-8" />
