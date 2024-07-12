@@ -19,7 +19,7 @@ const AgeVerification = ({ onVerify }) => {
         backgroundPosition: "center",
       }}
     >
-      <div className="bg-white/40 border border-white backdrop-blur-lg text-white p-14 rounded-lg shadow-lg">
+      <div className="bg-black/30 border border-white backdrop-blur-lg text-white p-14 rounded-lg shadow-lg">
         <h2 className="mb-14 text-lg font-bold">
           Are you at least 21 years old?
         </h2>
