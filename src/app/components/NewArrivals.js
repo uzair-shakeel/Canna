@@ -1,6 +1,6 @@
-import React, { useContext } from 'react';
-import { CartContext } from '../context/CartContext';
-import { useRouter } from 'next/navigation'; // Correctly import useRouter
+import React, { useContext } from "react";
+import { CartContext } from "../context/CartContext";
+import { useRouter } from "next/navigation"; // Correctly import useRouter
 
 const NewArrivals = () => {
   const { addToCart, cartItems } = useContext(CartContext); // Get addToCart and cartItems from CartContext
@@ -9,27 +9,31 @@ const NewArrivals = () => {
   const products = [
     {
       id: 1,
-      name: 'Indacloud - Cereal Milk Beast Mode THC-A Diamonds 6G Vape',
+      name: "Indacloud - Cereal Milk Beast Mode THC-A Diamonds 6G Vape",
       price: 69.99,
-      image: '/new/Image1.webp',
+      image: "/new/Image1.webp",
+      quantity: 1,
     },
     {
       id: 2,
-      name: 'Indacloud - Cereal Milk Beast Mode THC-A Diamonds 6G Vape 2',
+      name: "Indacloud - Cereal Milk Beast Mode THC-A Diamonds 6G Vape 2",
       price: 69.99,
-      image: '/new/Image2.webp',
+      image: "/new/Image2.webp",
+      quantity: 1,
     },
     {
       id: 3,
-      name: 'Indacloud - Cereal Milk Beast Mode THC-A Diamonds 6G Vape 3',
+      name: "Indacloud - Cereal Milk Beast Mode THC-A Diamonds 6G Vape 3",
       price: 69.99,
-      image: '/new/Image3.webp',
+      image: "/new/Image3.webp",
+      quantity: 1,
     },
     {
       id: 4,
-      name: 'Indacloud - Cereal Milk Beast Mode THC-A Diamonds 6G Vape 4',
+      name: "Indacloud - Cereal Milk Beast Mode THC-A Diamonds 6G Vape 4",
       price: 69.99,
-      image: '/new/Image4.webp',
+      image: "/new/Image4.webp",
+      quantity: 1,
     },
   ];
 
@@ -39,7 +43,7 @@ const NewArrivals = () => {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {products.map((product) => {
           // Check if the product is in the cart
-          const isInCart = cartItems.some(item => item.id === product.id);
+          const isInCart = cartItems.some((item) => item.id === product.id);
 
           return (
             <div
@@ -65,7 +69,7 @@ const NewArrivals = () => {
                   // Render Go to Cart button if the item is in the cart
                   <button
                     className="bg-green-500 w-full py-1 md:py-3 absolute bottom-0"
-                    onClick={() => router.push('/cart')} // Navigate to cart on click
+                    onClick={() => router.push("/cart")} // Navigate to cart on click
                   >
                     Go to Cart
                   </button>
