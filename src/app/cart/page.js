@@ -1,78 +1,78 @@
 'use client'
-import React, { useContext, useState } from 'react';
-import { CartContext } from '../context/CartContext'; // Adjust path
-import Navbar from '../components/Navbar';
+import React, { useContext } from 'react';
+import { CartContext } from '../context/CartContext';
 
-const CartPage = () => {
-  const { cartItems } = useContext(CartContext); // Get cartItems directly from context
+const NewArrivals = () => {
+  const { addToCart } = useContext(CartContext); // Get the addToCart function from CartContext
 
-  const [items, setItems] = useState(cartItems); // Use cartItems directly
+  const products = [
+    {
+      id: 1,
+      name: 'Indacloud - Cereal Milk Beast Mode THC-A Diamonds 6G Vape',
+      price: 69.99,
+      image: '/new/Image1.webp',
+    },
+    {
+      id: 2,
+      name: 'Indacloud - Cereal Milk Beast Mode THC-A Diamonds 6G Vape 2',
+      price: 69.99,
+      image: '/new/Image2.webp',
+    },
+    {
+      id: 3,
+      name: 'Indacloud - Cereal Milk Beast Mode THC-A Diamonds 6G Vape 3',
+      price: 69.99,
+      image: '/new/Image3.webp',
+    },
+    {
+      id: 4,
+      name: 'Indacloud - Cereal Milk Beast Mode THC-A Diamonds 6G Vape 4',
+      price: 69.99,
+      image: '/new/Image4.webp',
+    },
+  ];
 
-  const removeFromCart = (id) => {
-    setItems((prevItems) => prevItems.filter(item => item.id !== id));
+  const handleAddToCart = (product) => {
+    // Set initial quantity to 1 when adding the product to the cart
+    addToCart({ ...product, quantity: 1 });
   };
-
-  const updateQuantity = (id, newQuantity) => {
-    setItems((prevItems) =>
-      prevItems.map(item =>
-        item.id === id ? { ...item, quantity: newQuantity } : item
-      )
-    );
-  };
-
-  const totalPrice = items.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
   return (
-    <div>
-      <Navbar />
-      <div className="p-8 bg-blue-50 min-h-screen">
-        <h1 className="text-4xl font-bold mb-6 text-center text-light-blue-500">Your Cart</h1>
-        {items.length === 0 ? (
-          <p className="text-center text-lg ">Your cart is empty</p>
-        ) : (
-          <div className="space-y-6">
-            {items.map((item) => (
-              <div key={item.id} className="flex justify-between items-center bg-gray-800 shadow-lg rounded-lg p-4 hover:shadow-xl transition">
-                <img src={item.image} alt={item.name} className="w-32 h-32 object-cover rounded-lg" />
-                <div className="flex-1 mx-4">
-                  <h2 className="text-xl font-semibold text-light-blue-500 text-white">{item.name}</h2>
-                  <p className="text-md text-gray-400">${item.price.toFixed(2)}</p>
-                  <div className="flex items-center space-x-4">
-                    <button 
-                      onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                      disabled={item.quantity <= 1}
-                      className="bg-gray-600 text-white py-1 px-3 rounded-lg hover:bg-gray-700 transition"
-                    >
-                      -
-                    </button>
-                    <span className="text-white">{item.quantity}</span>
-                    <button 
-                      onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                      className="bg-gray-600 text-white py-1 px-3 rounded-lg hover:bg-gray-700 transition"
-                    >
-                      +
-                    </button>
-                  </div>
-                </div>
-                <button 
-                  onClick={() => removeFromCart(item.id)}
-                  className="bg-red-600 text-white py-2 px-4 rounded-lg hover:bg-red-700 transition"
-                >
-                  Remove
-                </button>
+    <div className="pb-24 px-[5%]">
+      <h3 className="font-bold text-3xl pb-8 text-center">New Arrivals</h3>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {products.map((product) => (
+          <div
+            key={product.id}
+            className="relative group h-[220px] md:h-[340px] overflow-hidden"
+          >
+            <img
+              src={product.image}
+              className="h-full w-full object-cover"
+              alt={product.name}
+            />
+            <div className="absolute inset-0 bottom-[-500px] group-hover:bottom-0 duration-300">
+              <span className="w-full h-full bg-black/50 opacity-0 group-hover:opacity-100 duration-300 absolute top-0 cursor-pointer"></span>
+              <div className="top-1/2 -translate-x-1/2 w-full left-1/2 cursor-pointer -translate-y-1/2 absolute">
+                <h3 className="font-semibold text-sm md:text-lg text-blue-100 w-full">
+                  {product.name}
+                </h3>
+                <p className="text-blue-100 py-3 text-md md:text-3xl font-bold">
+                  ${product.price.toFixed(2)}
+                </p>
               </div>
-            ))}
-            <div className="text-right mt-8 ">
-              <h3 className="text-2xl font-bold">Total: ${totalPrice.toFixed(2)}</h3>
-              <button className="bg-light-blue-500 py-2 px-8 rounded-lg hover:bg-light-blue-600 transition mt-4">
-                Proceed to Checkout
+              <button
+                className="bg-blue-100 w-full py-1 md:py-3 absolute bottom-0"
+                onClick={() => handleAddToCart(product)} // Use the updated function to add to cart
+              >
+                Buy Now
               </button>
             </div>
           </div>
-        )}
+        ))}
       </div>
     </div>
   );
 };
 
-export default CartPage;
+export default NewArrivals;

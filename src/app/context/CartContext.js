@@ -8,32 +8,28 @@ export const CartProvider = ({ children }) => {
     const savedCart = localStorage.getItem('cartItems');
     return savedCart ? JSON.parse(savedCart) : [];
   });
+  console.log(cartItems)
 
-  // This effect will run whenever cartItems changes, saving the latest cartItems to local storage
+  // Update local storage whenever cartItems changes
   useEffect(() => {
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
   }, [cartItems]);
 
-  const addToCart = (item) => {
-    setCartItems((prevItems) => {
-      const existingItem = prevItems.find((i) => i.id === item.id);
-      if (existingItem) {
-        // If the item is already in the cart, increase its quantity
-        return prevItems.map((i) =>
-          i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i
-        );
-      }
-      // If it's a new item, add it to the cart with a quantity of 1
-      return [...prevItems, { ...item, quantity: 1 }];
-    });
+  const addToCart = (product) => {
+    setCartItems((prevItems) => [...prevItems, product]);
   };
 
   const removeFromCart = (id) => {
-    setCartItems((prevItems) => prevItems.filter((item) => item.id !== id));
+    setCartItems((prevItems) => prevItems.filter(item => item.id !== id));
+    // No need to update localStorage here as useEffect will handle it
+  };
+
+  const clearCart = () => {
+    setCartItems([]);
   };
 
   return (
-    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart }}>
+    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart, clearCart }}>
       {children}
     </CartContext.Provider>
   );
