@@ -9,14 +9,9 @@ const Footer = () => {
             <img src="/logo.webp" className="h-full w-full object-cover" />
           </div>
           <p className=" font-light text-justify text-sm ">
-            Our CBD products are not for use by or sale to persons under the age
-            of 18. All CBD products contain less than 0.3% THC per the
-            Controlled Substances Act. These products should be used only as
-            directed on the label. They should not be used if you are pregnant
-            or nursing. A Doctor's advice should be sought before using these
-            and any supplemental dietary products. These statements have not
-            been evaluated by the FDA. This product is not intended to diagnose,
-            treat, cure or prevent any disease.
+          Cannamiami operates in compliance with the Agricultural Improvement Act of 2018 (commonly known as the 2018 Farm Bill), which legalized hemp cultivation and the sale of hemp-derived products within the United States. However, the legality of hemp products can vary by state and local jurisdiction, so users should verify the regulations in their area before making a purchase.
+Cannamiami does not provide medical advice, and any products or statements made on this website are not intended to diagnose, treat, cure, or prevent any disease or condition. Always consult with a qualified healthcare professional before starting any new health-related product or regimen.
+
           </p>
         </div>
         <div className="lg:w-[60%]  grid grid-cols-2 md:grid-cols-3 gap-4">

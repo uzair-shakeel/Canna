@@ -11,6 +11,7 @@ import { HiShoppingCart } from "react-icons/hi2";
 import { MdSell } from "react-icons/md";
 import AgeRestrictionBanner from "./components/AgeRestriction";
 import ExternalLinksDisclaimer from "./components/Disclaimer";
+import { CartContext } from "./context/CartContext";
 
 export default function Home() {
   const [isVerified, setIsVerified] = useState(false);

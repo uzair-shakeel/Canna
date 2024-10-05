@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import ClientLayout from "./ClientLayout"; // Import client-side layout
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,7 +12,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {/* Wrap the content inside ClientLayout for client-side logic */}
+        <ClientLayout>{children}</ClientLayout>
+      </body>
     </html>
   );
 }
