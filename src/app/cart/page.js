@@ -35,7 +35,7 @@ const CartPage = () => {
               <div key={item.id} className="flex justify-between items-center bg-gray-800 shadow-lg rounded-lg p-4 hover:shadow-xl transition">
                 <img src={item.image} alt={item.name} className="w-32 h-32 object-cover rounded-lg" />
                 <div className="flex-1 mx-4">
-                  <h2 className="text-xl font-semibold text-light-blue-500">{item.name}</h2>
+                  <h2 className="text-xl font-semibold text-light-blue-500 text-white">{item.name}</h2>
                   <p className="text-md text-gray-400">${item.price.toFixed(2)}</p>
                   <div className="flex items-center space-x-4">
                     <button 
