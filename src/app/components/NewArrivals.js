@@ -8,11 +8,31 @@ const NewArrivals = () => {
 
   const products = [
     {
+      id: 4,
+      name: "50mg THC Mini Syrup (Bottle)",
+      price: 50,
+      quantity: 1,
+      description:
+        "Our 50mg THC Pot Shot is a convenient, water-soluble 2oz shot, perfect for a quick and potent experience with fast-acting effects.",
+      images: [
+        "/products/img.jpg", // Replace these with actual image paths
+        "/products/IMG-20241009-WA0042.jpg",
+        "/products/IMG-20241009-WA0044.jpg",
+      ],
+    },
+    {
       id: 1,
       name: "15mg Delta 9 Vegan Ropes Clustered (3 pcs)",
       price: 60,
       image: "/products/IMG-20241009-WA0032.jpg",
       quantity: 1,
+      description:
+        "Our take on the classic Nerds Rope, these 50mg THC Ropes offer a high-dose, fun, and flavorful option for a potent and nostalgic experience.",
+      images: [
+        "/products/IMG-20241009-WA0032.jpg", // Replace these with actual image paths
+        "/products/IMG-20241009-WA0033.jpg",
+        "/products/IMG-20241009-WA0034.jpg",
+      ],
     },
     {
       id: 2,
@@ -20,6 +40,14 @@ const NewArrivals = () => {
       price: 35,
       image: "/products/IMG-20241009-WA0036.jpg",
       quantity: 1,
+
+      description:
+        "As a unique product in your lineup, our 15mg. THC Clusters feature a delightful crunchy exterior and chewy interior, delivering a balanced and robust dose to enhance your offerings.",
+      images: [
+        "/products/IMG-20241009-WA0036.jpg", // Replace these with actual image paths
+        "/products/IMG-20241009-WA0037.jpg",
+        "/products/IMG-20241009-WA0035.jpg",
+      ],
     },
     {
       id: 3,
@@ -27,13 +55,14 @@ const NewArrivals = () => {
       price: 40,
       image: "/products/IMG-20241009-WA0038.jpg",
       quantity: 1,
-    },
-    {
-      id: 4,
-      name: "50mg THC Mini Syrup (Bottle)",
-      price: 50,
-      image: "/products/IMG-20241009-WA0043.jpg",
-      quantity: 1,
+      description:
+        "Our classic 10mg THC Gummies, the most popular in our lineup, deliver a mild high with a perfect blend of flavor and consistency for an enjoyable experience.",
+      images: [
+        "/products/IMG-20241009-WA0038.jpg", // Replace these with actual image paths
+        "/products/IMG-20241009-WA0040.jpg",
+        "/products/IMG-20241009-WA0039.jpg",
+        "/products/IMG-20241009-WA0041.jpg",
+      ],
     },
   ];
 
@@ -65,7 +94,7 @@ const NewArrivals = () => {
                     ${product.price.toFixed(2)}
                   </p>
                 </div>
-                {isInCart ? (
+                {/* {isInCart ? (
                   // Render Go to Cart button if the item is in the cart
                   <button
                     className="bg-green-500 w-full py-1 md:py-3 absolute bottom-0"
@@ -81,7 +110,7 @@ const NewArrivals = () => {
                   >
                     Buy Now
                   </button>
-                )}
+                )} */}
               </div>
             </div>
           );

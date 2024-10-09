@@ -201,10 +201,13 @@ const CheckoutPage = () => {
                   key={item.id}
                   className="flex justify-between items-center bg-gray-800 p-4 rounded-lg"
                 >
-                  <span className="text-white">{item.name}</span>
-                  <span className="text-gray-400">
-                    ${item.price.toFixed(2)} x {item.quantity}
-                  </span>
+                  <div className="flex items-start ">
+                    <span className="text-gray-300 font-light mr-3">
+                      {item.quantity}x
+                    </span>
+                    <span className="text-white">{item.name}</span>
+                  </div>
+
                   <span className="font-bold text-white">
                     ${(item.price * item.quantity).toFixed(2)}
                   </span>

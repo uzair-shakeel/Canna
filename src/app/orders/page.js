@@ -19,7 +19,6 @@ const OrdersPage = () => {
 
   return (
     <div>
-      <Navbar />
       <div className="min-h-screen bg-blue-50 p-8">
         <h1 className="text-4xl font-bold text-center text-light-blue-500 mb-6">
           Your Orders
