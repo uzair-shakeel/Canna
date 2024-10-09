@@ -9,30 +9,30 @@ const NewArrivals = () => {
   const products = [
     {
       id: 1,
-      name: "Indacloud - Cereal Milk Beast Mode THC-A Diamonds 6G Vape",
-      price: 69.99,
-      image: "/new/Image1.webp",
+      name: "15mg Delta 9 Vegan Ropes Clustered (3 pcs)",
+      price: 60,
+      image: "/products/IMG-20241009-WA0032.jpg",
       quantity: 1,
     },
     {
       id: 2,
-      name: "Indacloud - Cereal Milk Beast Mode THC-A Diamonds 6G Vape 2",
-      price: 69.99,
-      image: "/new/Image2.webp",
+      name: "15mg Delta 9 Cube Cluster (20 pcs)",
+      price: 35,
+      image: "/products/IMG-20241009-WA0036.jpg",
       quantity: 1,
     },
     {
       id: 3,
-      name: "Indacloud - Cereal Milk Beast Mode THC-A Diamonds 6G Vape 3",
-      price: 69.99,
-      image: "/new/Image3.webp",
+      name: "10mg D9 Vegan Cubes (30 pcs)",
+      price: 40,
+      image: "/products/IMG-20241009-WA0038.jpg",
       quantity: 1,
     },
     {
       id: 4,
-      name: "Indacloud - Cereal Milk Beast Mode THC-A Diamonds 6G Vape 4",
-      price: 69.99,
-      image: "/new/Image4.webp",
+      name: "50mg THC Mini Syrup (Bottle)",
+      price: 50,
+      image: "/products/IMG-20241009-WA0043.jpg",
       quantity: 1,
     },
   ];
@@ -57,7 +57,7 @@ const NewArrivals = () => {
               />
               <div className="absolute inset-0 bottom-[-500px] group-hover:bottom-0 duration-300">
                 <span className="w-full h-full bg-black/50 opacity-0 group-hover:opacity-100 duration-300 absolute top-0 cursor-pointer"></span>
-                <div className="top-1/2 -translate-x-1/2 w-full left-1/2 cursor-pointer -translate-y-1/2 absolute">
+                <div className="top-1/2 -translate-x-1/2 text-center p-5 w-full left-1/2 cursor-pointer -translate-y-1/2 absolute">
                   <h3 className="font-semibold text-sm md:text-lg text-blue-100 w-full">
                     {product.name}
                   </h3>

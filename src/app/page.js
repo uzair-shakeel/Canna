@@ -12,6 +12,9 @@ import { MdSell } from "react-icons/md";
 import AgeRestrictionBanner from "./components/AgeRestriction";
 import ExternalLinksDisclaimer from "./components/Disclaimer";
 import { CartContext } from "./context/CartContext";
+import Delivery from "./components/Delivery";
+import NewArrivals from "./components/NewArrivals";
+import PopularProducts from "./components/PopularProducts";
 
 export default function Home() {
   const [isVerified, setIsVerified] = useState(false);
@@ -23,7 +26,12 @@ export default function Home() {
   return (
     <div>
       <Line />
-      <Products />
+      {/* <Products /> */}
+      <PopularProducts />
+
+      <Delivery />
+
+      <NewArrivals />
       <ExternalLinksDisclaimer />
       <AgeRestrictionBanner />
       <Footer />

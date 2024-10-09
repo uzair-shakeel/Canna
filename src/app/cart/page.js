@@ -30,7 +30,6 @@ const CartPage = () => {
 
   return (
     <div>
-      <Navbar />
       <div className="p-8 bg-blue-50 min-h-screen">
         <h1 className="text-4xl font-bold mb-6 text-center text-light-blue-500">
           Your Cart
