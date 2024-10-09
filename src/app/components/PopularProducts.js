@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
 import { CartContext } from "../context/CartContext";
-import { useRouter } from "next/navigation"; // Correctly import useRouter
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 
-const PopularProducts = () => {
-  const { addToCart, cartItems } = useContext(CartContext); // Get addToCart and cartItems from CartContext
-  const router = useRouter(); // Initialize router for navigation
+const PopularProducts = ({ name, order }) => {
+  const { addToCart, cartItems } = useContext(CartContext);
+  const router = useRouter();
 
   const products = [
     {
@@ -16,7 +16,7 @@ const PopularProducts = () => {
       description:
         "Our 50mg THC Pot Shot is a convenient, water-soluble 2oz shot, perfect for a quick and potent experience with fast-acting effects.",
       images: [
-        "/products/IMG-20241009-WA0043.jpg", // Replace these with actual image paths
+        "/products/IMG-20241009-WA0043.jpg",
         "/products/IMG-20241009-WA0042.jpg",
         "/products/IMG-20241009-WA0044.jpg",
       ],
@@ -30,7 +30,7 @@ const PopularProducts = () => {
       description:
         "Our classic 10mg THC Gummies, the most popular in our lineup, deliver a mild high with a perfect blend of flavor and consistency for an enjoyable experience.",
       images: [
-        "/products/IMG-20241009-WA0038.jpg", // Replace these with actual image paths
+        "/products/IMG-20241009-WA0038.jpg",
         "/products/IMG-20241009-WA0040.jpg",
         "/products/IMG-20241009-WA0039.jpg",
         "/products/IMG-20241009-WA0041.jpg",
@@ -42,11 +42,10 @@ const PopularProducts = () => {
       price: 35,
       image: "/products/IMG-20241009-WA0036.jpg",
       quantity: 1,
-
       description:
         "As a unique product in your lineup, our 15mg. THC Clusters feature a delightful crunchy exterior and chewy interior, delivering a balanced and robust dose to enhance your offerings.",
       images: [
-        "/products/IMG-20241009-WA0036.jpg", // Replace these with actual image paths
+        "/products/IMG-20241009-WA0036.jpg",
         "/products/IMG-20241009-WA0037.jpg",
         "/products/IMG-20241009-WA0035.jpg",
       ],
@@ -60,19 +59,32 @@ const PopularProducts = () => {
       description:
         "Our take on the classic Nerds Rope, these 50mg THC Ropes offer a high-dose, fun, and flavorful option for a potent and nostalgic experience.",
       images: [
-        "/products/IMG-20241009-WA0032.jpg", // Replace these with actual image paths
+        "/products/IMG-20241009-WA0032.jpg",
         "/products/IMG-20241009-WA0033.jpg",
         "/products/IMG-20241009-WA0034.jpg",
       ],
     },
   ];
 
+  // Sort products based on the order prop
+  const sortedProducts = [...products].sort((a, b) => {
+    if (order === "price-asc") {
+      return a.price - b.price; // Ascending order by price
+    } else if (order === "price-desc") {
+      return b.price - a.price; // Descending order by price
+    } else if (order === "name-asc") {
+      return a.name.localeCompare(b.name); // Ascending order by name
+    } else if (order === "name-desc") {
+      return b.name.localeCompare(a.name); // Descending order by name
+    }
+    return 0; // Default order if no order is specified
+  });
+
   return (
     <div className="py-24 px-[5%]">
-      <h3 className="font-bold text-3xl pb-8 text-center">Popular Products</h3>
+      <h3 className="font-bold text-3xl pb-8 text-center">{name}</h3>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        {products.map((product) => {
-          // Check if the product is in the cart
+        {sortedProducts.map((product) => {
           const isInCart = cartItems.some((item) => item.id === product.id);
 
           return (
@@ -98,23 +110,7 @@ const PopularProducts = () => {
                     </p>
                   </div>
                 </Link>
-                {/* {isInCart ? (
-                  // Render Go to Cart button if the item is in the cart
-                  <button
-                    className="bg-green-500 w-full py-1 md:py-3 absolute bottom-0"
-                    onClick={() => router.push("/cart")} // Navigate to cart on click
-                  >
-                    Go to Cart
-                  </button>
-                ) : (
-                  // Render Buy Now button if the item is not in the cart
-                  <button
-                    className="bg-blue-100 w-full py-1 md:py-3 absolute bottom-0"
-                    onClick={() => addToCart(product)} // Add to cart on click
-                  >
-                    Buy Now
-                  </button>
-                )} */}
+                {/* Button logic */}
               </div>
             </div>
           );

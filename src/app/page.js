@@ -44,9 +44,10 @@ export default function Home() {
   return (
     <div>
       <Line />
-      <PopularProducts />
+      <PopularProducts name={"Popular Products"} />
       <Delivery />
-      <NewArrivals />
+      <PopularProducts name={"New Products"} order="price-asc" />
+
       <ExternalLinksDisclaimer />
       <AgeRestrictionBanner />
       <Footer />
