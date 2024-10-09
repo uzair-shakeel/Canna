@@ -133,10 +133,10 @@ const ProductDetail = () => {
             </button>
           ) : (
             <button
-              className="bg-black hover:bg-black/90 duration-150 text-white w-full py-3 rounded-md"
+              className="bg-[#3dc2c5] hover:bg-[#2ea4a6] duration-150 text-white w-full py-3 rounded-md"
               onClick={handleAddToCart}
             >
-              Add to Cart
+              Add to Cart 
             </button>
           )}
         </div>
