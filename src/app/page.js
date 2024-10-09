@@ -67,7 +67,7 @@ export default function Home() {
           height={32}
         />
         <Image
-          src="/new/THCA.png"
+          src="/new/Delta9.png"
           alt="THCA"
           className="h-8 w-8"
           width={32}
