@@ -57,15 +57,17 @@ const ProductDetail = () => {
     {
       id: 1,
       name: "15mg Delta 9 Vegan Ropes Clustered (3 pcs)",
-      price: 60,
-      image: "/products/IMG-20241009-WA0032.jpg",
+      price: 30,
+      image: "/products/Nerd rope_page-0001.jpg",
       quantity: 1,
       description:
         "Our take on the classic Nerds Rope, these 50mg THC Ropes offer a high-dose, fun, and flavorful option for a potent and nostalgic experience.",
       images: [
+        "/products/Nerd rope_page-0001.jpg",
+        "/products/Nerd rope copy_page-0001.jpg",
+        "/products/Nerd rope copy_page-0002.jpg",
         "/products/IMG-20241009-WA0032.jpg", // Replace these with actual image paths
         "/products/IMG-20241009-WA0033.jpg",
-        "/products/IMG-20241009-WA0034.jpg",
       ],
     },
   ];
@@ -136,7 +138,7 @@ const ProductDetail = () => {
               className="bg-[#3dc2c5] hover:bg-[#2ea4a6] duration-150 text-white w-full py-3 rounded-md"
               onClick={handleAddToCart}
             >
-              Add to Cart 
+              Add to Cart
             </button>
           )}
         </div>
