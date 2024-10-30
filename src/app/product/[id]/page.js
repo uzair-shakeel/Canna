@@ -28,11 +28,12 @@ const ProductDetail = () => {
       id: 3,
       name: "10mg D9 Vegan Cubes (30 pcs)",
       price: 40,
-      image: "/products/IMG-20241009-WA0038.jpg",
+      image: "",
       quantity: 1,
       description:
         "Our classic 10mg THC Gummies, the most popular in our lineup, deliver a mild high with a perfect blend of flavor and consistency for an enjoyable experience.",
       images: [
+        "/products/nurds cluster copy 2_page-0001.jpg", // Replace these with actual image paths
         "/products/IMG-20241009-WA0038.jpg", // Replace these with actual image paths
         "/products/IMG-20241009-WA0040.jpg",
         "/products/IMG-20241009-WA0039.jpg",
@@ -49,6 +50,7 @@ const ProductDetail = () => {
       description:
         "As a unique product in your lineup, our 15mg. THC Clusters feature a delightful crunchy exterior and chewy interior, delivering a balanced and robust dose to enhance your offerings.",
       images: [
+        "/products/gummies 15mg_page-0001.jpg", // Replace these with actual image paths
         "/products/IMG-20241009-WA0036.jpg", // Replace these with actual image paths
         "/products/IMG-20241009-WA0037.jpg",
         "/products/IMG-20241009-WA0035.jpg",
