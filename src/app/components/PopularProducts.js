@@ -16,7 +16,7 @@ const PopularProducts = ({ name, order }) => {
       description:
         "Our 50mg THC Pot Shot is a convenient, water-soluble 2oz shot, perfect for a quick and potent experience with fast-acting effects.",
       images: [
-        "/products/IMG-20241009-WA0043.jpg",
+        "/products/IMG-20241009-WA0043.jpg", // Replace these with actual image paths
         "/products/IMG-20241009-WA0042.jpg",
         "/products/IMG-20241009-WA0044.jpg",
       ],
@@ -24,14 +24,14 @@ const PopularProducts = ({ name, order }) => {
     {
       id: 3,
       name: "10mg D9 Vegan Cubes (30 pcs)",
-      price: 40,
-      image: "/products/IMG-20241009-WA0038.jpg",
+      price: 35,
+      image: "",
       quantity: 1,
       description:
         "Our classic 10mg THC Gummies, the most popular in our lineup, deliver a mild high with a perfect blend of flavor and consistency for an enjoyable experience.",
       images: [
-        "/products/nurds cluster copy 2_page-0001.jpg",
-        "/products/IMG-20241009-WA0038.jpg",
+        "/products/gummies 15mg_page-0001.jpg",
+        "/products/IMG-20241009-WA0038.jpg", // Replace these with actual image paths
         "/products/IMG-20241009-WA0040.jpg",
         "/products/IMG-20241009-WA0039.jpg",
         "/products/IMG-20241009-WA0041.jpg",
@@ -40,14 +40,15 @@ const PopularProducts = ({ name, order }) => {
     {
       id: 2,
       name: "15mg Delta 9 Cube Cluster (20 pcs)",
-      price: 35,
+      price: 30,
       image: "/products/IMG-20241009-WA0036.jpg",
       quantity: 1,
+
       description:
         "As a unique product in your lineup, our 15mg. THC Clusters feature a delightful crunchy exterior and chewy interior, delivering a balanced and robust dose to enhance your offerings.",
       images: [
-        "/products/gummies 15mg_page-0001.jpg",
-        "/products/IMG-20241009-WA0036.jpg",
+        "/products/nurds cluster copy 2_page-0001.jpg",
+        "/products/IMG-20241009-WA0036.jpg", // Replace these with actual image paths
         "/products/IMG-20241009-WA0037.jpg",
         "/products/IMG-20241009-WA0035.jpg",
       ],
@@ -55,7 +56,7 @@ const PopularProducts = ({ name, order }) => {
     {
       id: 1,
       name: "15mg Delta 9 Vegan Ropes Clustered (3 pcs)",
-      price: 30,
+      price: 20,
       image: "/products/Nerd rope_page-0001.jpg",
       quantity: 1,
       description:
@@ -64,9 +65,8 @@ const PopularProducts = ({ name, order }) => {
         "/products/Nerd rope_page-0001.jpg",
         "/products/Nerd rope copy_page-0001.jpg",
         "/products/Nerd rope copy_page-0002.jpg",
-        "/products/IMG-20241009-WA0032.jpg",
+        "/products/IMG-20241009-WA0032.jpg", // Replace these with actual image paths
         "/products/IMG-20241009-WA0033.jpg",
-        "/products/IMG-20241009-WA0034.jpg",
       ],
     },
   ];
