@@ -50,7 +50,7 @@ const ProductDetail = () => {
       description:
         "As a unique product in your lineup, our 15mg. THC Clusters feature a delightful crunchy exterior and chewy interior, delivering a balanced and robust dose to enhance your offerings.",
       images: [
-        "/products/nurds cluster copy 2_page-0001.jpg",
+        "/products/cluster.png",
         "/products/IMG-20241009-WA0036.jpg", // Replace these with actual image paths
         "/products/IMG-20241009-WA0037.jpg",
         "/products/IMG-20241009-WA0035.jpg",

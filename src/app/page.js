@@ -8,9 +8,9 @@ import { FaPhone } from "react-icons/fa";
 import { HiShoppingCart } from "react-icons/hi2";
 import { MdSell } from "react-icons/md";
 import AgeRestrictionBanner from "./components/AgeRestriction";
+import FederalLaw from "./components/FederalLaw";
 import ExternalLinksDisclaimer from "./components/Disclaimer";
 import Delivery from "./components/Delivery";
-import NewArrivals from "./components/NewArrivals";
 import PopularProducts from "./components/PopularProducts";
 
 export default function Home() {
@@ -50,6 +50,7 @@ export default function Home() {
 
       <ExternalLinksDisclaimer />
       <AgeRestrictionBanner />
+      <FederalLaw />
       <Footer />
 
       <a
