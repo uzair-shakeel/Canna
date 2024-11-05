@@ -54,7 +54,7 @@ const NewArrivals = () => {
     },
     {
       id: 1,
-      name: "15mg Delta 9 Vegan Ropes Clustered (3 pcs)",
+      name: "50mg Delta 9 Vegan Ropes Clustered (3 pcs)",
       price: 20,
       image: "/products/Nerd rope_page-0001.jpg",
       quantity: 1,
